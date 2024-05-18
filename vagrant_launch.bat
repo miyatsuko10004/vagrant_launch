@@ -1,14 +1,8 @@
 @echo off
-REM V Launcher
-
-REM --------------
-REM config
-REM --------------
+REM vagrant launcher
 
 cd /d %~dp0
 
-REM Directory with virtualization software (VirtualBox.exe)
-REM (* It may be possible to use VMware, but I have not tried it.)
 SET "VIRTUALIZATIONSOFTWARE_DIR=C:\Program Files\Oracle\VirtualBox"
 
 REM Project directory
@@ -16,8 +10,8 @@ SET "PROJECT_DIR=F:\manyo_develop"
 
 REM ---------------------------------------------------
 
-echo **** V Launcher ****
-echo V Launcher is executing...
+echo **** Vagrant launch ****
+echo Vagrant launch is executing...
 
 REM Check if the VirtualBox.exe exists
 IF NOT EXIST "%VIRTUALIZATIONSOFTWARE_DIR%\VirtualBox.exe" (
