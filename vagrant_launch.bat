@@ -29,4 +29,13 @@ cd /d "%PROJECT_DIR%"
 echo vagrant up command execute.
 vagrant up
 
+REM Check if vagrant up was successful
+IF %ERRORLEVEL% NEQ 0 (
+    echo vagrant up failed. Exiting...
+    exit /b
+)
+
+echo Running SSH commands...
+vagrant ssh -c "bash /vagrant/ssh_commands.sh"
+
 cmd /k cd "%PROJECT_DIR%"
